@@ -13,4 +13,4 @@ Step 2: Open the /builds folder.
 
 Step 3: Add the latest version from the /builds folder to your build path.
 
-Step 4: Enjoy! Check out the wiki for documentation.
+Step 4: Enjoy! [Check the wiki](http://google.com) for documentation.
