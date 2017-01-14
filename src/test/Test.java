@@ -4,7 +4,9 @@ import javax.swing.JFrame;
 import org.hjutils.*;
 public class Test {
 	public static void main(String[] args) {
-		JFrame quickFrame = QuickFrame.createFrame("Test Frame", false, 300, 300, true);
-		System.out.println(HJRandom.randint(1, 10));
+		StrintCollection strint = new StrintCollection(5);
+		strint.addStrint("test", 13);
+		strint.addStrint("test 2", 24);
+		System.out.println("Strint at index 0: " + strint.getInt(0) + "Strint at index 1: " + strint.getInt(1));
 	}
 }
