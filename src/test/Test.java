@@ -3,6 +3,7 @@ import javax.swing.JFrame;
 
 import org.hjutils.*;
 public class Test {
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		StrintCollection strint = new StrintCollection(5);
 		strint.addStrint("test", 13);
