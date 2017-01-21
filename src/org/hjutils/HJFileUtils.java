@@ -8,6 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 public class HJFileUtils {
+	// Method to write to file
 	public static void writeToFile(String toWrite, String filePath) {
 		File fout = new File(filePath);
 		FileOutputStream fos;
@@ -21,6 +22,8 @@ public class HJFileUtils {
 			e.printStackTrace();
 		}
 	}
+	
+	// Method to read from file
 	public static String readFile(String filePath) throws Exception {
 		String returnString = "0";
 		Scanner scanner = new Scanner(new FileReader(filePath));
