@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.OutputStreamWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class HJFileUtils {
@@ -32,5 +34,11 @@ public class HJFileUtils {
 		}
 		scanner.close();
 		return returnString;
+	}
+	public static boolean doesDirectoryExist(String path) {
+		return(Files.isDirectory(Paths.get(path)));
+	}
+	public static String getCurrentWorkingDir() {
+		return Paths.get(".").toAbsolutePath().normalize().toString();
 	}
 }
