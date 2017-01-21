@@ -2,7 +2,7 @@ package org.hjutils;
 
 import javax.swing.JFrame;
 
-public class QuickFrame {
+public abstract class QuickFrame {
 	public static JFrame createFrame(String name, boolean isResizable, int width, int height, boolean isStatic) {
 		JFrame toReturn = new JFrame(name);
 		toReturn.setResizable(isResizable);

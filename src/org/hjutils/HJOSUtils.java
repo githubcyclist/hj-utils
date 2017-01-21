@@ -1,6 +1,6 @@
 package org.hjutils;
 
-public class HJOSUtils {
+public abstract class HJOSUtils {
    private static String OS = null;
    public static String getOsName() {
       if(OS == null) {

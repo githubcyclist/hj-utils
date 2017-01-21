@@ -9,7 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class HJFileUtils {
+public abstract class HJFileUtils {
 	// Method to write to file
 	public static void writeToFile(String toWrite, String filePath) {
 		File fout = new File(filePath);
@@ -35,10 +35,28 @@ public class HJFileUtils {
 		scanner.close();
 		return returnString;
 	}
+	
+	// Method to check if directory exists
 	public static boolean doesDirectoryExist(String path) {
 		return(Files.isDirectory(Paths.get(path)));
 	}
+	
+	// Method to get the current working directory
 	public static String getCurrentWorkingDir() {
 		return Paths.get(".").toAbsolutePath().normalize().toString();
+	}
+	
+	// Method to create a new directory
+	public static boolean createDirectory(String path) {
+		File dir = new File(path);
+	    // attempt to create the directory here
+	    boolean successful = dir.mkdir();
+	    if (successful) {
+	      // creating the directory succeeded
+	      return true;
+	    } else {
+	      // creating the directory failed
+	      return false;
+	    }
 	}
 }

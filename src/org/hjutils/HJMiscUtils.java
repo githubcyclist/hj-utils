@@ -2,7 +2,7 @@ package org.hjutils;
 
 import java.io.IOException;
 
-public class HJMiscUtils {
+public abstract class HJMiscUtils {
 	public void clearScreen() {
 		try {
 			if(HJOSUtils.isWindows()) {
